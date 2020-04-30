@@ -7,20 +7,20 @@ author: Bagus Faisal Khafidz
 
 2. Install APK 
 
-   ![1](/images/1.png =250x)
+   <img src="https://github.com/bagusfaisal24/ramadhan-ceria/blob/master/images/1.png" width=150 align=right>
 
 3. Pilih Tetap Install
 
-   ![2](/images/2.png =250x)
+   <img src="https://github.com/bagusfaisal24/ramadhan-ceria/blob/master/images/2.png" width=150 align=right>
 
 4. Pilih jangan Kirim
 
-   ![3](/images/3.png =250x)
+   <img src="https://github.com/bagusfaisal24/ramadhan-ceria/blob/master/images/3.png" width=150 align=right>
 
 5. Masuk aplikasi ke setting-> aplikasi setelah itu cari aplikasi yang sudah terisntall,
 
    kemudian berikan akses lokasi
 
-   ![4](/images/4.png =250x)
+   <img src="https://github.com/bagusfaisal24/ramadhan-ceria/blob/master/images/4.png" width=150 align=right>
 
    
