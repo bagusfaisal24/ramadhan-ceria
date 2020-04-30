@@ -49,6 +49,8 @@ public class Imsakiyah extends AppWidgetProvider {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+        RemoteViews views = new RemoteViews(context.getPackageName(),
+                R.layout.imsakiyah);
         Gson gson = new Gson();
         Type type = new TypeToken<List<ModelData>>() {
         }.getType();
@@ -56,10 +58,17 @@ public class Imsakiyah extends AppWidgetProvider {
         String listWaktu = intent.getStringExtra("waktu");
         List<ModelData> dataList = gson.fromJson(listWaktu, type);
         if (dataList != null) {
-            Log.e("data", dataList.get(0).getDateHijriah());
+            views.setTextViewText(R.id.waktu, String.format("%s/ %s", dataList.get(0).getDateMasehi(), dataList.get(0).getDateHijriah()));
+            for (ModelDetailData data : dataList.get(0).getWaktu()) {
+                views.setTextViewText(R.id.txtTimeSubuh, data.getSubuh());
+                views.setTextViewText(R.id.txtTimeImsak, data.getImsak());
+                views.setTextViewText(R.id.txtTimeDhuhur, data.getDzuhur());
+                views.setTextViewText(R.id.txtTimeAshar, data.getAshar());
+                views.setTextViewText(R.id.txtTimeMagrib, data.getMaghrib());
+                views.setTextViewText(R.id.txtTimeIsya, data.getIsya());
+            }
         }
-        RemoteViews views = new RemoteViews(context.getPackageName(),
-                R.layout.imsakiyah);
+
         if (wilayah != null) {
             views.setTextViewText(R.id.wilayah, wilayah);
             Log.e("location", wilayah);
