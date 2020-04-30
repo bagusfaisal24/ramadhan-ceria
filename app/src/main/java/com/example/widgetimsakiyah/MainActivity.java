@@ -2,6 +2,7 @@ package com.example.widgetimsakiyah;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -58,16 +59,18 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("max", " " + addresses.get(0).getMaxAddressLineIndex());
 
                 String address = addresses.get(0).getAddressLine(0);
-                String city = addresses.get(0).getLocality();
+                String kecamatan = addresses.get(0).getLocality();
                 String state = addresses.get(0).getAdminArea();
+                String city = addresses.get(0).getSubAdminArea();
                 String country = addresses.get(0).getCountryName();
-                String postalCode = addresses.get(0).getPostalCode();
-                String knownName = addresses.get(0).getFeatureName(); // Only if available else return NULL
 
                 addresses.get(0).getAdminArea();
                 textView.setText(address);
+                String CONCAT_WILAYAH = "%s, %s, %s, %s";
+                Intent intent = new Intent(this, Imsakiyah.class);
+                intent.putExtra("location", String.format(CONCAT_WILAYAH, kecamatan, city, state, country));
+                getApplicationContext().sendBroadcast(intent);
             }
         }
-
     }
 }

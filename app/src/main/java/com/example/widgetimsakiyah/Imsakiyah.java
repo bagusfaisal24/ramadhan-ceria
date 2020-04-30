@@ -2,7 +2,10 @@ package com.example.widgetimsakiyah;
 
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.widget.RemoteViews;
 
 /**
@@ -12,8 +15,6 @@ public class Imsakiyah extends AppWidgetProvider {
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
-
-        CharSequence widgetText = context.getString(R.string.app_name);
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.imsakiyah);
 
@@ -37,6 +38,25 @@ public class Imsakiyah extends AppWidgetProvider {
     @Override
     public void onDisabled(Context context) {
         // Enter relevant functionality for when the last widget is disabled
+    }
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        String s = intent.getStringExtra("location");
+        RemoteViews views = new RemoteViews(context.getPackageName(),
+                R.layout.imsakiyah);
+        if (s != null) {
+            views.setTextViewText(R.id.wilayah, s);
+            Log.e("location", s);
+        } else {
+            views.setTextViewText(R.id.wilayah, "");
+        }
+        AppWidgetManager appWidgetManager = AppWidgetManager
+                .getInstance(context);
+        appWidgetManager.updateAppWidget(new ComponentName(context,
+                Imsakiyah.class), views);
+
+        super.onReceive(context, intent);
     }
 }
 
