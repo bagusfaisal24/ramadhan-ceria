@@ -11,15 +11,33 @@
         android:layout_margin="8dp"
         android:background="@color/colorPrimary"
         android:contentDescription="@string/app_name"
-        android:text="Jadwal Sholat dan Imsakiyah Ramadhan 1441H"
         android:gravity="center"
+        android:text="Jadwal Sholat dan Imsakiyah Ramadhan 1441H"
         android:textColor="#ffffff"
         android:textSize="24sp"
         android:textStyle="bold|italic" />
 
+    <TextView
+        android:id="@+id/wilayah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appwidget_text"
+        android:gravity="center"
+        android:text="wilayah"
+        android:textStyle="italic" />
+    <TextView
+        android:id="@+id/waktu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wilayah"
+        android:gravity="center"
+        android:text="waktu"
+        android:textStyle="italic" />
+
     <include
         layout="@layout/datepray"
-        android:layout_below="@+id/appwidget_text"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_width="match_parent"/>
+        android:layout_below="@+id/wilayah" />
+
 </RelativeLayout>
