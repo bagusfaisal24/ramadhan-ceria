@@ -8,6 +8,13 @@ import android.content.Intent;
 import android.util.Log;
 import android.widget.RemoteViews;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Implementation of App Widget functionality.
  */
@@ -42,12 +49,20 @@ public class Imsakiyah extends AppWidgetProvider {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        String s = intent.getStringExtra("location");
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<ModelData>>() {
+        }.getType();
+        String wilayah = intent.getStringExtra("location");
+        String listWaktu = intent.getStringExtra("waktu");
+        List<ModelData> dataList = gson.fromJson(listWaktu, type);
+        if (dataList != null) {
+            Log.e("data", dataList.get(0).getDateHijriah());
+        }
         RemoteViews views = new RemoteViews(context.getPackageName(),
                 R.layout.imsakiyah);
-        if (s != null) {
-            views.setTextViewText(R.id.wilayah, s);
-            Log.e("location", s);
+        if (wilayah != null) {
+            views.setTextViewText(R.id.wilayah, wilayah);
+            Log.e("location", wilayah);
         } else {
             views.setTextViewText(R.id.wilayah, "");
         }
