@@ -1,5 +1,7 @@
 ## Simple Widget Android Jadwal Imsakiyah
 
+<img src="https://github.com/bagusfaisal24/ramadhan-ceria/blob/master/images/xx.png" width=150 align=right>
+
 Adopsi API from: https://aladhan.com/prayer-times-api
 author: Bagus Faisal Khafidz
 
