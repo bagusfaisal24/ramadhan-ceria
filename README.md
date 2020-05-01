@@ -19,7 +19,7 @@ Adopsi API from: https://aladhan.com/prayer-times-api
 
    <img src="https://github.com/bagusfaisal24/ramadhan-ceria/blob/master/images/3.png" width=150>
 
-5. Masuk aplikasi ke setting-> aplikasi setelah itu cari aplikasi yang sudah terisntall,
+5. Masuk aplikasi ke setting-> aplikasi setelah itu cari aplikasi yang sudah terinstall,
    kemudian berikan akses lokasi
    
    <img src="https://github.com/bagusfaisal24/ramadhan-ceria/blob/master/images/4.png" width=150>
