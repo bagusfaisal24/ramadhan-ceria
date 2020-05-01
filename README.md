@@ -5,7 +5,7 @@
 Adopsi API from: https://aladhan.com/prayer-times-api
 
 ### Cara Install
-1. Download APK ada di http://tiny.cc/0xa4nz
+1. Download APK ada di http://tiny.cc/p2b6nz
 
 2. Install APK 
 
