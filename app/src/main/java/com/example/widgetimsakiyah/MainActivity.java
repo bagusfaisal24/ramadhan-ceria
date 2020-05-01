@@ -58,6 +58,31 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
     private void setAddress(Double latitude, Double longitude) {
         Geocoder geocoder;
         List<Address> addresses = null;
@@ -84,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getData(final String city, final String country, final String kecamatan, final String state) {
-        StringRequest jsonObjectRequest = new StringRequest(Request.Method.GET, "http://api.aladhan.com/v1/timingsByCity?city=" + city + "&country=" + country + "&method=11",
+        StringRequest jsonObjectRequest = new StringRequest(Request.Method.GET, "http://api.aladhan.com/v1/timingsByCity?city=" + city + "&country=" + country + "&method=11&tune=3,3,0,4,2,4,0,1,0",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
