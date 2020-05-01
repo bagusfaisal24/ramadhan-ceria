@@ -1,6 +1,6 @@
 ## Simple Widget Android Jadwal Imsakiyah
 
-<img src="https://github.com/bagusfaisal24/ramadhan-ceria/blob/master/images/xx.png" width=150 align=right>
+<img src="https://github.com/bagusfaisal24/ramadhan-ceria/blob/master/images/xx.png" width=150>
 
 Adopsi API from: https://aladhan.com/prayer-times-api
 author: Bagus Faisal Khafidz
@@ -11,7 +11,6 @@ author: Bagus Faisal Khafidz
    <img src="https://github.com/bagusfaisal24/ramadhan-ceria/blob/master/images/1.png" width=150>
 
 3. Pilih Tetap Install
-   ![Sample 1](https://raw.githubusercontent.com/piinalpin/flask-crud/master/Image-1.PNG)
    <img src="https://github.com/bagusfaisal24/ramadhan-ceria/blob/master/images/2.png" width=150>
 
 4. Pilih jangan Kirim
